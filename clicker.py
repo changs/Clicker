@@ -6,6 +6,7 @@ import time
 import requests
 import json
 import ConfigParser
+import os
 
 
 class Api:
@@ -16,10 +17,12 @@ class Api:
 
     def coffee(self):
         payload = self.prepare_payload('coffees')
+        os.system("ssh netguru@192.168.1.51 -A -t 'say Coffee. By the way, I am Rahul, from India.'")
         return self.send_payload(payload)
 
     def sandwich(self):
         payload = self.prepare_payload('sandwiches')
+        os.system("ssh netguru@192.168.1.51 -A -t 'say Sandwich'")
         return self.send_payload(payload)
 
     def prepare_payload(self, stat_name):
