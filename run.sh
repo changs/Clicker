@@ -1,2 +1,2 @@
-ps -C "sudo python clicker.py" -o pid= | xargs sudo kill -9
+ps -C "sudo python clicker.py" -o pid= | sudo xargs kill -9
 nohup sudo python clicker.py&
